@@ -4,7 +4,7 @@ This is the code for the following paper:
 
 Shangjun Liu, Sarah Ostadabbas  [A Semi-Supervised Data Augmentation Approach using 3D Graphical Engines](https://arxiv.org/abs/1808.02595), ECCV 2018. 
 
-Check the [project page](http://www.di.ens.fr/willow/research/surreal/) for more materials.  !!! link!!! 
+Check the [project page](make a Research Spotlights in ACLab research page like the one that you did for ISP-GPM) for more materials.  !!! link!!! 
 
 ![ScanAva procedure](images/ScanAva.png)
 ![sample data](images/combinedRealSyn.png)
