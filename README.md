@@ -10,7 +10,7 @@ Shangjun Liu, Sarah Ostadabbas,  [A Semi-Supervised Data Augmentation Approach u
 Contact: 
 [Shuangjun Liu](liu.shu@husk.neu.edu), [Sarah Ostadabbas](ostadabbas@gmail.com)
 
-## Contents  !!! work on later according to the content we have 
+## Contents 
 * [1. Requirement](#1-requirement)
 * [2. Human Scan](#2-Human-scan)
 * [3. Human rigging](#3-Human-rigging)
