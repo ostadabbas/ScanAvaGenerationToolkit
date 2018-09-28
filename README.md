@@ -2,7 +2,7 @@
 
 This is the code for the following paper:
 
-Shangjun Liu, Sarah Ostadabbas  [A Semi-Supervised Data Augmentation Approach using 3D Graphical Engines](https://arxiv.org/abs/1808.02595), ECCV 2018. 
+Shangjun Liu, Sarah Ostadabbas,  [A Semi-Supervised Data Augmentation Approach using 3D Graphical Engines](https://arxiv.org/abs/1808.02595), ECCV 2018. 
 
 ![ScanAva procedure](images/ScanAva.png)
 ![sample data](images/combinedRealSyn.png)
@@ -76,7 +76,7 @@ If you use this code, please cite the following:
 @article{liu2018semi,
   title={A Semi-Supervised Data Augmentation Approach using 3D Graphical Engines},
   author={Liu, Shuangjun and Ostadabbas, Sarah},
-  journal={9th International Workshop on Human Behavior Understanding: at the European Conference on Computer Vision (ECCV’18), arXiv preprint arXiv:1808.02595},
+  journal={9th International Workshop on Human Behavior Understanding: at ECCV’18, arXiv preprint arXiv:1808.02595},
   year={2018}
 }
 ```
