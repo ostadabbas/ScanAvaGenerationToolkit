@@ -2,18 +2,15 @@
 
 This is the code for the following paper:
 
-Shangjun Liu, Sarah Ostadabbas  [A Semi-Supervised Data Augmentation Approach using 3D Graphical Engines](https://arxiv.org/abs/1808.02595), ECCV 2018. 
-
-Check the [project page](http://www.di.ens.fr/willow/research/surreal/) for more materials.  !!! link!!! 
+Shangjun Liu, Sarah Ostadabbas,  [A Semi-Supervised Data Augmentation Approach using 3D Graphical Engines](https://arxiv.org/abs/1808.02595), ECCV 2018. 
 
 ![ScanAva procedure](images/ScanAva.png)
 ![sample data](images/combinedRealSyn.png)
 
 Contact: 
-[Shuangjun Liu](liu.shu@husk.neu.edu),
+[Shuangjun Liu](liu.shu@husk.neu.edu), [Sarah Ostadabbas](ostadabbas@gmail.com)
 
-[Sarah Ostadabbas](ostadabbas@gmail.com)
-## Contents  !!! work on later according to the content we have 
+## Contents 
 * [1. Requirement](#1-requirement)
 * [2. Human Scan](#2-Human-scan)
 * [3. Human rigging](#3-Human-rigging)
@@ -67,9 +64,7 @@ We also provide test result from model trained by 10000 SURREAL samples and also
 
 For adaptation version, the test set should be preprocessed by the same adaptation. For example, gaussian filter should be applied to test set when using model trained with gaussian filter. 
 
-where,  
-wn stands for white noise 
-gauFt stands for gaussian filter. 
+where wn stands for white noise, and gauFt stands for gaussian filter. 
 
 In `final_preds.h5` file, the prediction result "preds", ground truth "joints_gt" and also the torso length 'lenTorso' are provided. So you can generate PCK from these data.   
 
@@ -126,7 +121,7 @@ If you use this code, please cite the following:
 @article{liu2018semi,
   title={A Semi-Supervised Data Augmentation Approach using 3D Graphical Engines},
   author={Liu, Shuangjun and Ostadabbas, Sarah},
-  journal={arXiv preprint arXiv:1808.02595},
+  journal={9th International Workshop on Human Behavior Understanding: at ECCV’18, arXiv preprint arXiv:1808.02595},
   year={2018}
 }
 ```
