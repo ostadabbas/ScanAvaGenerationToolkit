@@ -45,8 +45,7 @@ Edit ‘bldLs’ to include the blender files you wish to generate data-sets for
 You can change the file being ran to either “genDescFromRRv3.py” or “genDescFromUni_v2.py”, depending on if you want the poses to come from RR or from uniform and independent random joint angles
 “genDescFromRRv3.py” or “genDescFromUni_v2.py”: All necessary parameters to edit are in the “USER PARAMS” section at the top of the code. 
 
-“blender_folder_path”: Set this to the location of the “augmentation_code” folder of yours in the Discovery Cluster
-i.e.: ‘/home/sehgal.n/augmentation_code’ 
+“blender_folder_path”: Set this to the location of the “augmentation_code” folder of yours i.e.: ‘/home/sehgal.n/augmentation_code’ 
 
 “py35_package_path”: Set this to the location of the site packages for your py35 installation of miniconda (as discussed in previous section)
 i.e.: ‘/home/sehgal.n/miniconda3/envs/py35/lib/python3.5/site-packages’
@@ -60,7 +59,7 @@ We test our generation method with state of art [hourglass](https://github.com/u
 If you want to train it, please download our generated [ScanAva](http://www.coe.neu.edu/Research/AClab/ScanAva/ScanAva.zip) dataset and test against our corresponding real world 2d image set [AC2d](http://www.coe.neu.edu/Research/AClab/ScanAva/AC2d.zip)
 
 We provide [pretrained models](http://www.coe.neu.edu/Research/AClab/ScanAva/ScanAvaModel.zip) trained on seven people and also on single person without/with white noise or gaussian filter. 
-For seven people version, we test it agains the corresponding real 2d images of same persons we synthesize from. 
+For seven people version, we test it against the corresponding real 2d images of same persons we synthesize from. 
 
 For single person version, we trained on synthetic people and test agains same people with clothes never appear in synthetic trainning set to test the generalization ability against specific person. 
 
@@ -74,6 +73,52 @@ gauFt stands for gaussian filter.
 
 In `final_preds.h5` file, the prediction result "preds", ground truth "joints_gt" and also the torso length 'lenTorso' are provided. So you can generate PCK from these data.   
 
+## 6. Labeling Toolkit 
+To build up corresponding real and synthetic corresponding datasets, we also provide a labeling toolkit conventional dataset generation which is located in folder labelTool/. 
+
+First you need to collect your own images with conventional device such as smart phone or webcam then put them in a folder structure.  
+For example:  
+
+'datasetNm/images/xxx.jpg'
+
+Then modify the corresponding data path, subfolder which contains images, if rotate angle for labeling, and image format  
+
+`
+dsFd = 'S:\ACLab\datasets_prep\ac2d_00_lbTest';
+subFd = 'images'
+angRt = 0; % clock wise 
+imgFmt = 'jpg';
+`
+
+Then simply run the sc_labelImSet.m to label the dataset.
+### labeling instructions  
+The joint follow the sequence of (LSP dataset)[http://sam.johnson.io/research/lsp.html] as:
+
+* Right ankle
+* Right knee
+* Right hip
+* Left hip
+* Left knee
+* Left ankle
+* Right wrist
+* Right elbow
+* Right shoulder
+* Left shoulder
+* Left elbow
+* Left wrist
+* Neck
+* Head top
+
+* left for visible, 
+* right for invisible. 
+* 'r' for redo last label 
+* 'e' to end the session 
+After each labeling, input 1 for continue, 2 for redo the current image. 
+
+We also provides a auto saving mechanism that you can always continue from last checkpoints if interrupted during labeling process. You can also specify the starting and end index label selectively.  More detailed usage, please refer to function `LabelImSet.m`.  
+
+![label](images/labeling.PNG)
+![skeleton](images/skeleton.PNG)
 
 ## Citation 
 If you use this code, please cite the following:
